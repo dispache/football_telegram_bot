@@ -1,7 +1,7 @@
 const { Telegraf } = require('telegraf');
 const parser = require('./parser.js');
 
-const TelegramBot = new Telegraf('1631423362:AAFavkBy-sWpuVJ4NPKZD6riDIZHb-X0otc');
+const TelegramBot = new Telegraf(process.env['football_telegram_bot']);
 
 TelegramBot.start((ctx) => {
 	ctx.reply(`Приветствую, ${ctx.update.message.from.first_name} !
